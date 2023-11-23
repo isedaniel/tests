@@ -1,7 +1,11 @@
 # Some C++ Tests
 
-This are some test done while reading through [LearCpp](https://www.learncpp.com).
+These are some tests done while reading through [LearnCpp](https://www.learncpp.com).
 
 ## Compile command
 
-g++ -o main -ggdb -pedantic-errors main.cpp
+g++ -o main -ggdb -pedantic-errors _filename_.cpp
+
+* `-ggdb` for debug build.
+* `-pedantic-errors` for ensure that compiler remains compliant with C++ standards.
+
