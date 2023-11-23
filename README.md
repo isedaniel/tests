@@ -7,5 +7,5 @@ These are some tests done while reading through [LearnCpp](https://www.learncpp.
 `g++ -o main -ggdb -pedantic-errors file.cpp`
 
 * `-ggdb` for debug build.
-* `-pedantic-errors` for ensure that compiler remains compliant with C++ standards.
+* `-pedantic-errors` to ensure that the compiler remains compliant with C++ standards.
 
