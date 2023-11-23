@@ -4,8 +4,8 @@ These are some tests done while reading through [LearnCpp](https://www.learncpp.
 
 ## Compile command
 
-`g++ -o main -ggdb -pedantic-errors file.cpp`
+`g++ -o main -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion file.cpp`
 
-* `-ggdb` for debug build.
+* `-ggdb` debug build.
 * `-pedantic-errors` to ensure that the compiler remains compliant with C++ standards.
-
+* `-Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion` increase warning levels
