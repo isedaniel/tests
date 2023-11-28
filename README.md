@@ -9,4 +9,4 @@ These are some tests done while reading through [LearnCpp](https://www.learncpp.
 * `-ggdb` debug build.
 * `-pedantic-errors` to ensure that the compiler remains compliant with C++ standards.
 * `-Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion` increase warning levels
-* `-std=c++20` adds C++20 compatibility
+* `-std=c++20` sets C++20 compatibility
