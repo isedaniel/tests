@@ -10,3 +10,4 @@ int main()
 	std::cout << y << '\n';
 	return 0;
 }
+

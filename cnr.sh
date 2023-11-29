@@ -1,20 +1,24 @@
 #!/bin/bash
-# My compile script
+# compile and run script
 
-if [ -z "$1" ];
-then echo "Usage: compile.sh filename (without .cpp)";
+if [ -z "$1" ]; then 
+	echo "Usage: sh cnr.sh filename (without .cpp)";
+	exit 1
 fi
 
-file="$1".cpp
-
-g++ -o $1 -ggdb -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion $file -std=c++20
-
 RED='\033[0;31m'
+GREEN='\033[0;32m'
 NC='\033[0m' # No color
-echo
-printf "${RED}Running${NC}\n"
-printf "${RED}=======${NC}\n"
-echo 
 
-./$1
+# if everything is okay run, else print error code and exit
+if ./compile.sh $1; then
+	echo ""
+	printf "${GREEN}Running${NC}\n"
+	printf "${GREEN}=======${NC}\n"
+	echo ""
+	./$1;
+	exit 0
+else
+	exit 1
+fi
 
