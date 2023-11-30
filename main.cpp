@@ -5,7 +5,5 @@ int main() {
   int x{};
   std::cin >> x;
   std::cout << "You entered: " << x << '\n';
-  int y;
-  std::cout << y << '\n';
   return 0;
 }
