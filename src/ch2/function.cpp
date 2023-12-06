@@ -1,14 +1,14 @@
 #include <iostream>
 
-void getInt(int &i) {
+int getInt() {
   std::cout << "Enter a number: ";
+  int i {};
   std::cin >> i;
+  return i;
 }
 
 int main() {
-  int i{};
-  getInt(i);
-
+  int i { getInt() };
   std::cout << "You entered " << i << '\n';
   return 0;
 }
