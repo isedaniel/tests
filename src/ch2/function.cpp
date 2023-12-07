@@ -1,7 +1,8 @@
 #include <iostream>
 
-int getInt() {
-  std::cout << "Enter a number: ";
+int getInt(std::string s) {
+  std::string  output { "Enter a number(" + s + "): " };
+  std::cout << output;
   int i {};
   std::cin >> i;
   return i;
@@ -11,16 +12,14 @@ void printDouble(int i) {
   std::cout << i << " doubled is: " << i*2 << '\n';
 }
 
-void printDouble(int i, int x) {
+void printDouble(int x, int y) {
   std::cout << "This is doubled doble" << '\n';
-  printDouble(i);
   printDouble(x);
+  printDouble(y);
 }
 
 int main() {
-  int i { getInt() };
-  std::cout << "You entered " << i << '\n';
-  printDouble(i, i+1);
+  printDouble(getInt("x"), getInt("y"));
   return 0;
 }
 
