@@ -8,7 +8,9 @@ int getInt(std::string s) {
   return i;
 }
 
-void printDouble(int i) { std::cout << i << " doubled is: " << i * 2 << '\n'; }
+int doubleInt(int);
+
+void printDouble(int i) { std::cout << i << " doubled is: " << doubleInt(i) << '\n'; }
 
 void printDouble(int x, int y) {
   std::cout << "This is doubled doble" << '\n';
@@ -19,4 +21,8 @@ void printDouble(int x, int y) {
 int main() {
   printDouble(getInt("x"), getInt("y"));
   return 0;
+}
+
+int doubleInt(int x) {
+  return x*2;
 }
