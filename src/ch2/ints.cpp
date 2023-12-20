@@ -1,3 +1,4 @@
+#include "ints.h"
 #include <iostream>
 
 int getInt(std::string s) {
@@ -15,7 +16,7 @@ void printDouble(int i) {
 }
 
 void printDouble(int x, int y) {
-  std::cout << "This is doubled doble" << '\n';
+  std::cout << "This is doubled double" << '\n';
   printDouble(x);
   printDouble(y);
 }
