@@ -1,9 +1,11 @@
 #include <iostream>
 
+void printValue(int x) {
+	std::cout << "Printing value... ";
+	std::cout << x << '\n';
+}
+
 int main() {
-  std::cout << "Enter a number: ";
-  int x{};
-  std::cin >> x;
-  std::cout << "You entered: " << x << '\n';
-  return 0;
+	printValue(5);
+	return 0;
 }
