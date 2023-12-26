@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 int readNumber()
 {
@@ -15,9 +16,14 @@ void writeAnswer(int x)
 
 int main()
 {
-	int x { readNumber() };
-	x = x + readNumber();
-	writeAnswer(x);
+	// int x { readNumber() };
+	// x = x + readNumber();
+	// writeAnswer(x);
+
+	double d = pow(2, 5 - 1);
+	double min = -d;
+	double max = d - 1;
+	std::cout << "range = [" << min << ", " << max << "]" << '\n';
 
 	return 0;
 }
