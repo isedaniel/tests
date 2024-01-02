@@ -1,8 +1,12 @@
 #include <iostream>
 
 int main() {
-  std::cout << "This is a unsigned int" << '\n';
-  unsigned int i{3};
-  std::cout << i << '\n';
+  int i{-1};
+  unsigned int j{1};
+  if (i < j) {
+    std::cout << "i is less than j\n";
+  } else {
+    std::cout << "j is less than i\n";
+  }
   return 0;
 }
