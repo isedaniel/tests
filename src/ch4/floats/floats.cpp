@@ -1,18 +1,17 @@
-#include <string>
 #include <iostream>
+#include <string>
 
 int spend(int balance) {
   if (balance >= 25)
     return balance - 25;
-  else {
+  else
     std::cout << "Insufficient funds!\n";
-    return balance;
-  }
+  return balance;
 }
 
 int main() {
-  int exit { 0 };
-  int balance { 100 };
+  int exit{0};
+  int balance{100};
 
   while (!exit) {
     std::string cmd{};
@@ -25,7 +24,7 @@ int main() {
       std::cout << balance / 100.0 << '\n';
     else if (cmd == "spend")
       balance = spend(balance);
-    else 
+    else
       std::cout << "Command not found\n";
   }
 
