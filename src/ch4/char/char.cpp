@@ -2,9 +2,8 @@
 
 int main() {
   char c{};
-  for (int i = 0; i < 128; i++) {
-    c = i;
-    std::cout << i << ':' << c << '\n';
-  }
+  std::cout << "Enter a character: ";
+  std::cin >> c;
+  std::cout << "You entered " << c << '\n';
   return 0;
 }
