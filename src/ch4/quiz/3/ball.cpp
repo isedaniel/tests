@@ -7,15 +7,17 @@ double getHeight() {
   return height;
 }
 
-double getNewHeight(double height, int second) {
+double getDistanceFallen(int second) {
   double gravity {9.8};
+  double distanceFallen {gravity * second * second / 2.0};
+  return distanceFallen;
+}
 
-void getHeightAtSecond(double height, int second) {
-  double gravity{9.8};
-  double distanceFallen{gravity * second * second / 2};
-  if (height > distanceFallen)
+void printHeightAtSecond(double initial, int second) {
+  double newHeight { initial - getDistanceFallen(second) };
+  if (newHeight > 0)
     std::cout << "At " << second
-              << " seconds, the ball is at height: " << height - distanceFallen
+              << " seconds, the ball is at height: " << newHeight
               << " meters.\n";
   else
     std::cout << "At " << second << " seconds, the ball is on the ground.\n";
@@ -24,7 +26,7 @@ void getHeightAtSecond(double height, int second) {
 int main() {
   double height{getHeight()};
   for (int i = 0; i <= 5; i++) {
-    getHeightAtSecond(height, i);
+    printHeightAtSecond(height, i);
   }
   return 0;
 }
