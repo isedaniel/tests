@@ -2,9 +2,13 @@
 #include <string>
 
 int main() {
-  std::string name{"Dani"};
-  std::cout << name << '\n';
-  name = "Mora";
-  std::cout << name << '\n';
+  std::cout << "Enter your full name: ";
+  std::string name{};
+  std::cin >> name;
+  std::cout << "Enter your dog's name: ";
+  std::string dogName{};
+  std::cin >> dogName;
+  std::cout << "Your name is " << name << " and your dog's name is " << dogName
+            << ".\n";
   return 0;
 }
