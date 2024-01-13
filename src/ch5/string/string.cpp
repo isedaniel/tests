@@ -10,5 +10,7 @@ int main() {
   std::getline(std::cin >> std::ws, dogName);
   std::cout << "Your name is " << name << " and your dog's name is " << dogName
             << ".\n";
+  std::cout << "Name len: " << name.length() << '\n';
+  std::cout << "Dog's name len: " << dogName.length() << '\n';
   return 0;
 }
