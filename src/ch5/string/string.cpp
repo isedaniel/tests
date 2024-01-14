@@ -10,9 +10,9 @@ int main() {
   std::getline(std::cin >> std::ws, dogName);
   std::cout << "Your name is " << name << " and your dog's name is " << dogName
             << ".\n";
-  int nameLen { static_cast<int>(name.length()) };
+  long nameLen { std::ssize(name) };
   std::cout << "Name len: " << nameLen << '\n';
-  int dogNameLen { static_cast<int>(dogName.length()) };
+  long dogNameLen { std::ssize(dogName) };
   std::cout << "Dog's name len: " << dogNameLen << '\n';
   return 0;
 }
