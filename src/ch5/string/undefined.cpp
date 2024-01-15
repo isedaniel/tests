@@ -2,13 +2,11 @@
 #include <string>
 #include <string_view>
 
-std::string getName() {
-  std::string s{"Danilo"};
-  return s;
-}
-
 int main() {
-  std::string_view sv{getName()};
+  std::string s{"Hello"};
+  std::string_view sv{s};
+
+  s = "Good bye !";
   std::cout << sv << '\n';
   return 0;
 }
