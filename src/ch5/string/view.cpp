@@ -1,10 +1,10 @@
 #include <iostream>
-#include <string>
+#include <string_view>
 
-void printString(std::string s) { std::cout << s << '\n'; }
+void printString(std::string_view s) { std::cout << s << '\n'; }
 
 int main() {
-  std::string s{"Hello, World!"};
+  std::string_view s{"Hello, World!"};
   printString(s);
   return 0;
 }
