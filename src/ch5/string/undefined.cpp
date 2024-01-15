@@ -2,8 +2,7 @@
 #include <string_view>
 
 std::string_view getBoolName(bool b) {
-  if (b)
-    return "true";
+  if (b) return "true";
   return "false";
 }
 
