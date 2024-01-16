@@ -36,10 +36,10 @@ void getOlder(std::string_view name1, int age1, std::string_view name2,
 }
 
 int main() {
-  std::string name1{getName(1)};
-  int age1{getAge(name1)};
-  std::string name2{getName(2)};
-  int age2{getAge(name2)};
+  const std::string name1{getName(1)};
+  const int age1{getAge(name1)};
+  const std::string name2{getName(2)};
+  const int age2{getAge(name2)};
   getOlder(name1, age1, name2, age2);
   return 0;
 }
