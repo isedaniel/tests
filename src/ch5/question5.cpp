@@ -14,17 +14,25 @@ int getAge(std::string_view name) {
   return age;
 }
 
-void printOlder(std::string_view name1, int age1, std::string_view name2,
-                int age2) {
+void printOlder(std::string_view olderName, int olderAge,
+                std::string_view youngerName, int youngerAge) {
+  std::cout << olderName << " (age " << olderAge << ") is older than "
+            << youngerName << " (age " << youngerAge << ").\n";
+}
+
+void printSameAge(std::string_view name1, std::string_view name2, int age) {
+  std::cout << name1 << " and " << name2 << " are the same age (" << age
+            << ").\n";
+}
+
+void getOlder(std::string_view name1, int age1, std::string_view name2,
+              int age2) {
   if (age1 > age2)
-    std::cout << name1 << "(age " << age1 << ") is older than " << name2
-              << "(age " << age2 << ").\n";
+    printOlder(name1, age1, name2, age2);
   else if (age2 > age1)
-    std::cout << name2 << "(age " << age2 << ") is olden than " << name1
-              << "(age " << age1 << ").\n";
+    printOlder(name2, age2, name1, age1);
   else
-    std::cout << name1 << "and " << name2 << "are the same age (" << age1
-              << ").\n";
+    printSameAge(name1, name2, age1);
 }
 
 int main() {
@@ -32,6 +40,6 @@ int main() {
   int age1{getAge(name1)};
   std::string name2{getName(2)};
   int age2{getAge(name2)};
-  printOlder(name1, age1, name2, age2);
+  getOlder(name1, age1, name2, age2);
   return 0;
 }
