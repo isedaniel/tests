@@ -1,22 +1,16 @@
 #include <iostream>
 
-constexpr std::string getQuantityPhrase(int quantity) { 
-  if (quantity < 0)
-    return "negative";
-  if (quantity == 0)
-    return "no";
-  if (quantity == 1)
-    return "a single";
-  if (quantity == 2)
-    return "a couple of";
-  if (quantity == 3)
-    return "a few";
+constexpr std::string_view getQuantityPhrase(int quantity) {
+  if (quantity < 0) return "negative";
+  if (quantity == 0) return "no";
+  if (quantity == 1) return "a single";
+  if (quantity == 2) return "a couple of";
+  if (quantity == 3) return "a few";
   return "many";
 }
 
-constexpr std::string getApplesPluralized(int quantity) {
-  if (quantity == 1) return "apple";
-  return "apples";
+constexpr std::string_view getApplesPluralized(int quantity) {
+  return (quantity == 1) ? "apple" : "apples";
 }
 
 int main() {
