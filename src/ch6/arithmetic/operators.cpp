@@ -1,8 +1,10 @@
 #include <iostream>
 
 int main() {
-  int money{100};
-  std::cout << money - 100 / 3 << '\n';
-  std::cout << money / 100 << '\n';
+  constexpr int apples {12};
+  std::cout << "You have " << apples << " apples. Enter how many people to divide them between: ";
+  int people{};
+  std::cin >> people;
+  std::cout << "Each person gets " << apples / people << " apples.\n";
   return 0;
 }
