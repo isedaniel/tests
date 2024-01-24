@@ -11,6 +11,7 @@ int main() {
   double y{20.2 - 20.0};
   double relEpsilon{1e-4};
 
+  std::cout << std::boolalpha;
   std::cout << approximatelyEqualRel(x, y, relEpsilon) << '\n';
   return 0;
 }
