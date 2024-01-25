@@ -1,6 +1,6 @@
 #include <iostream>
 
-constexpr bool isEven(int n) { return n % 2 == 0; }
+constexpr bool isEven(int n) { return !(n % 2); }
 
 int main() {
   std::cout << "Enter an integer: ";
