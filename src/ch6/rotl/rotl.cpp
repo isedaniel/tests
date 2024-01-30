@@ -2,17 +2,7 @@
 #include <iostream>
 
 std::bitset<4> rotl(std::bitset<4> bits) {
-  const std::bitset<4> left{0b1000};
-
-  const bool checkLeft{(left & bits).any()};
-
-  bits <<= 1;
-
-  if (checkLeft) {
-    const std::bitset<4> right{0b0001};
-    bits = (bits | right);
-  }
-  return bits;
+  return (bits << 1) | (bits >> 3);
 }
 
 int main() {
