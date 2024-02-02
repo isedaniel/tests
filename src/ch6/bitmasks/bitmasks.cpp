@@ -11,9 +11,10 @@ int main() {
 
   std::uint8_t myArticleFlags{opt_favorited | opt_viewed};
 
+  std::cout << "fav article (bit 2): ";
   std::cout << std::bitset<8>{myArticleFlags} << '\n';
 
-  std::cout << "article deleted? "
+  std::cout << "article deleted (bit 4)? "
             << (myArticleFlags & opt_deleted ? "yes\n" : "no\n");
 
   myArticleFlags &= static_cast<std::uint8_t>(~opt_favorited);
