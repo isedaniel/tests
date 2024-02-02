@@ -16,5 +16,9 @@ int main() {
   std::cout << "article deleted? "
             << (myArticleFlags & opt_deleted ? "yes\n" : "no\n");
 
+  myArticleFlags &= static_cast<std::uint8_t>(~opt_favorited);
+  std::cout << "article unfav: ";
+  std::cout << std::bitset<8>{myArticleFlags} << '\n';
+
   return 0;
 }
