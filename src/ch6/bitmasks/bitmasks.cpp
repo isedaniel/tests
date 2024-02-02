@@ -9,7 +9,7 @@ int main() {
   [[maybe_unused]] constexpr std::uint8_t opt_shared{ 0x08 };
   [[maybe_unused]] constexpr std::uint8_t opt_deleted{ 0x10 };
 
-  std::uint8_t myArticleFlags{ opt_favorited };
+  std::uint8_t myArticleFlags{ opt_favorited | opt_viewed };
 
   std::cout << std::bitset<8>{ myArticleFlags } << '\n';
 
