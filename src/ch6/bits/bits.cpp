@@ -14,8 +14,8 @@ int main() {
   int num{};
   std::cin >> num;
 
-  if (num > 255) {
-    std::cout << "Number should be lesser than 255\n";
+  if (0 > num || num > 255) {
+    std::cout << "Number should be from 0 to 255\n";
     return 1;
   }
 
