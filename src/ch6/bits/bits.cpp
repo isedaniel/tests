@@ -1,58 +1,37 @@
 #include <iostream>
 
-int main() {
-  int b1{};
-  int b2{};
-  int b4{};
-  int b8{};
-  int b16{};
-  int b32{};
-  int b64{};
-  int b128{};
+int printAndDecrement(int num, int pow) {
+  if (num >= pow) {
+    std::cout << '1';
+    return (num - pow);
+  }
+  else
+    std::cout << '0';
+  return num;
+}
 
+int main() {
   std::cout << "Enter a number (0-255): ";
   int num{};
   std::cin >> num;
 
-  if (0 > num || num > 255) {
+  if (num < 0 || 255 < num) {
     std::cout << "Number should be from 0 to 255\n";
     return 1;
   }
 
-  if (num >= 128) {
-    b128 = 1;
-    num -= 128;
-  }
+  num = printAndDecrement(num, 128);
+  num = printAndDecrement(num, 64);
+  num = printAndDecrement(num, 32);
+  num = printAndDecrement(num, 16);
 
-  if (num >= 64) {
-    b64 = 1;
-    num -= 64;
-  }
-  if (num >= 32) {
-    b32 = 1;
-    num -= 32;
-  }
-  if (num >= 16) {
-    b16 = 1;
-    num -= 16;
-  }
-  if (num >= 8) {
-    b8 = 1;
-    num -= 8;
-  }
-  if (num >= 4) {
-    b4 = 1;
-    num -= 4;
-  }
-  if (num >= 2) {
-    b2 = 1;
-    num -= 2;
-  }
+  std::cout << ' ';
 
-  if (num == 1) {
-    b1 = 1;
-  }
+  num = printAndDecrement(num, 8);
+  num = printAndDecrement(num, 4);
+  num = printAndDecrement(num, 2);
+  num = printAndDecrement(num, 1);
 
-  std::cout << b128 << b64 << b32 << b16 << ' ' << b8 << b4 << b2 << b1 << '\n';
+  std::cout << '\n';
   return 0;
 }
