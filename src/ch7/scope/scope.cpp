@@ -9,12 +9,12 @@ int main() {
   int larger{};
   std::cin >> larger;
 
-  if (smaller > larger)
-  {
-    int i {larger};
-    larger = smaller;
-    smaller = i;
+  if (smaller > larger) {
     std::cout << "Swapping values\n";
+
+    int temp{larger};
+    larger = smaller;
+    smaller = temp;
   }
 
   std::cout << "The smaller value is " << smaller << '\n';
