@@ -12,9 +12,7 @@ int main() {
   if (smaller > larger) {
     std::cout << "Swapping values\n";
 
-    int temp{larger};
-    larger = smaller;
-    smaller = temp;
+    std::swap(smaller, larger);
   }
 
   std::cout << "The smaller value is " << smaller << '\n';
