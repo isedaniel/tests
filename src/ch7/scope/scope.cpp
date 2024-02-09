@@ -1,12 +1,15 @@
 #include <iostream>
 
 int main() {
-  int x{9};
-  std::cout << x << '\n';
-  {
-    int x{1};
-    std::cout << x << '\n';
-  }
-  std::cout << x << '\n';
+  std::cout << "Enter an integer: ";
+  int smaller{};
+  std::cin >> smaller;
+
+  std::cout << "Enter a larger integer: ";
+  int larger{};
+  std::cin >> larger;
+
+  std::cout << "The smaller value is " << smaller << '\n';
+  std::cout << "The larger value is " << larger << '\n';
   return 0;
 }
