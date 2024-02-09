@@ -14,7 +14,7 @@ int main() {
     int i {larger};
     larger = smaller;
     smaller = i;
-    std::cout << "Swaping values\n";
+    std::cout << "Swapping values\n";
   }
 
   std::cout << "The smaller value is " << smaller << '\n';
