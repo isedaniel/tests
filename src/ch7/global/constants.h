@@ -2,8 +2,8 @@
 #define CONSTANTS_H
 
 namespace constants {
-extern const double pi;
-extern const double gravity;
+inline constexpr double pi{3.14};
+inline constexpr double gravity{9.2};
 }
 
 #endif
