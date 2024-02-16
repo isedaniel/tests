@@ -2,8 +2,8 @@
 
 // the static keyword makes the variable program-wide persistent
 void func() {
-  static int i{};
-  std::cout << i++ << '\n';
+  static int s_i{};
+  std::cout << s_i++ << '\n';
 }
 
 int main() {
