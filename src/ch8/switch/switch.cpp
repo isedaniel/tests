@@ -1,23 +1,22 @@
 #include <iostream>
 
-int nPlusOne(int n) { return n + 1; }
-
-void printNPlusOne(int n) {
-  std::cout << "N plus one is ";
-  switch (nPlusOne(n)) {
+void printName(int n) {
+  std::cout << "N is ";
+  switch (n) {
   case 1:
     std::cout << "one.";
-    return;
+    break;
   case 2:
     std::cout << "two.";
-    return;
+    break;
   case 3:
     std::cout << "three.";
-    return;
+    break;
   default:
     std::cout << "greater than three.";
-    return;
+    break;
   }
+  std::cout << '\n';
 }
 
 int main() {
@@ -27,7 +26,6 @@ int main() {
     std::cin >> n;
   }
 
-  printNPlusOne(n);
-  std::cout << '\n';
+  printName(n);
   return 0;
 }
