@@ -10,8 +10,8 @@ void printName(int n) {
     std::cout << "two.";
     break;
   case 3:
-    std::cout << "three.";
-    break;
+    std::cout << "three or ";
+    [[fallthrough]];
   default:
     std::cout << "greater than three.";
     break;
