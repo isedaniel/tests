@@ -18,6 +18,9 @@ void calculate(int x, int y, char operation) {
       }
       std::cout << x / y;
       break;
+    case '%':
+      std::cout << x % y;
+      break;
     default:
       std::cout << "Insert valid input.";
       break;
@@ -34,7 +37,7 @@ int main() {
   int y{};
   std::cin >> y;
 
-  std::cout << "Operation (+, -, *, /): ";
+  std::cout << "Operation (+, -, *, /, %): ";
   char operation{};
   std::cin >> operation;
 
