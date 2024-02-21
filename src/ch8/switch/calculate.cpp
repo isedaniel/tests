@@ -19,7 +19,7 @@ void calculate(int x, int y, char operation) {
       std::cout << x / y;
       break;
     default:
-      std::cout << "Insert a valid operator (+, -, *, /)";
+      std::cout << "Insert valid input.";
       break;
   }
   std::cout << '\n';
