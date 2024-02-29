@@ -2,3 +2,4 @@
 -pedantic-errors
 -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion
 -std=c++20
+-xc++
