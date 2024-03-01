@@ -1,5 +1,10 @@
 #include <iostream>
 
+namespace Constants
+{
+constexpr double gravity{9.8};
+}
+
 namespace Tower {
 double getHeight() {
   std::cout << "Enter the height of the tower in meters: ";
@@ -11,8 +16,7 @@ double getHeight() {
 
 namespace Ball {
 double calculateHeight(double initialHeight, int seconds) {
-  constexpr double gravity{9.8};
-  const double fallDistance{gravity * seconds * seconds / 2.0};
+  const double fallDistance{Constants::gravity * seconds * seconds / 2.0};
   const double ballHeight{initialHeight - fallDistance};
 
   if (ballHeight < 0) {
@@ -32,20 +36,20 @@ void printHeight(double ballHeight, int seconds) {
   }
 }
 
-bool calculateAndPrintHeight(double initialHeight, int seconds) {
+double calculateAndPrintHeight(double initialHeight, int seconds) {
   double ballHeight{calculateHeight(initialHeight, seconds)};
   printHeight(ballHeight, seconds);
-  return (ballHeight > 0);
+  return ballHeight;
 }
+
 } // namespace Ball
 
 int main() {
   double towerHeight{Tower::getHeight()};
-  int seconds{1};
-  bool fallingBall{Ball::calculateAndPrintHeight(towerHeight, seconds)};
-  while (fallingBall) {
+
+  int seconds{0};
+  while (Ball::calculateAndPrintHeight(towerHeight, seconds) > 0.0) {
     ++seconds;
-    fallingBall = Ball::calculateAndPrintHeight(towerHeight, seconds);
   }
   return 0;
 }
