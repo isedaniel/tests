@@ -1,45 +1,51 @@
 #include <iostream>
 
-// Get tower height from user
-double getTowerHeight() {
+namespace Tower {
+double getHeight() {
   std::cout << "Enter the height of the tower in meters: ";
   double towerHeight{};
   std::cin >> towerHeight;
   return towerHeight;
 }
+} // namespace Tower
 
-double calculateBallHeight(double towerHeight, int seconds) {
-  const double gravity{9.8};
+namespace Ball {
+double calculateHeight(double initialHeight, int seconds) {
+  constexpr double gravity{9.8};
   const double fallDistance{gravity * seconds * seconds / 2.0};
-  const double ballHeight{towerHeight - fallDistance};
+  const double ballHeight{initialHeight - fallDistance};
 
-  if (ballHeight < 0)
+  if (ballHeight < 0) {
     return 0.0;
+  }
 
   return ballHeight;
 }
 
-void printBallHeight(double ballHeight, int seconds) {
+void printHeight(double ballHeight, int seconds) {
   if (ballHeight > 0) {
     std::cout << "At " << seconds
-              << " seconds, the ball is at height: " << ballHeight
+              << " seconds the ball is at height: " << ballHeight
               << " meters.\n";
   } else {
-    std::cout << "At " << seconds << " the ball is on the ground.\n";
+    std::cout << "At " << seconds << " seconds the ball is on the ground.\n";
   }
 }
 
-void calculateAndPrintBallHeight(double towerHeight, int seconds) {
-  double ballHeight{calculateBallHeight(towerHeight, seconds)};
-  printBallHeight(ballHeight, seconds);
+bool calculateAndPrintHeight(double initialHeight, int seconds) {
+  double ballHeight{calculateHeight(initialHeight, seconds)};
+  printHeight(ballHeight, seconds);
+  return (ballHeight > 0);
 }
+} // namespace Ball
 
 int main() {
-  double towerHeight{getTowerHeight()};
-
-  calculateAndPrintBallHeight(towerHeight, 1);
-  calculateAndPrintBallHeight(towerHeight, 2);
-  calculateAndPrintBallHeight(towerHeight, 3);
-  calculateAndPrintBallHeight(towerHeight, 4);
-  calculateAndPrintBallHeight(towerHeight, 5);
+  double towerHeight{Tower::getHeight()};
+  int seconds{1};
+  bool fallingBall{Ball::calculateAndPrintHeight(towerHeight, seconds)};
+  while (fallingBall) {
+    ++seconds;
+    fallingBall = Ball::calculateAndPrintHeight(towerHeight, seconds);
+  }
+  return 0;
 }
