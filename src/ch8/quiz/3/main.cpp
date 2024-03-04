@@ -1,9 +1,10 @@
+#include "random.h"
 #include <iostream>
 
 void game() {
   std::cout << "Let's play a game. I'm thinking of a number between 1 and 100. You have 7 tries to guess what it is.\n";
 
-  int number {42};
+  int number {Random::get(1, 100)};
   int guess{0};
 
   for (int i{1}; i<=7; ++i) {
