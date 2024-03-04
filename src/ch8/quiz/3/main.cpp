@@ -1,19 +1,35 @@
 #include <iostream>
 
 void game() {
-  int number {42};
+  std::cout << "Let's play a game. I'm thinking of a number between 1 and 100. You have 7 tries to guess what it is.\n";
 
-  for (int guess{1}; guess <= 7; ++guess) {
-    
+  int number {42};
+  int guess{0};
+
+  for (int i{1}; i<=7; ++i) {
+    std::cout << "Guess #" << i << ": ";
+    std::cin >> guess;
+
+    if (guess < number) {
+      std::cout << "Your guess is too low.\n";
+    }
+    else if (guess > number) {
+      std::cout << "Your guess is too high.\n";
+    }
+    else {
+      std::cout << "Correct! You win!\n";
+      return;
+    }
   }
+  std::cout << "Sorry, you lose. The correct number was " << number << ".\n";
 }
 
 int main() {
   char play{'y'};
-  while (play == 'y') {
-    // game
+  while (play != 'n') {
+    if (play == 'y') { game(); }
 
-    std::cout << "Would you like to play again? (y/N) ";
+    std::cout << "Would you like to play again? (y/n) ";
     std::cin >> play;
   }
 
