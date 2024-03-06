@@ -11,5 +11,5 @@ void divide(int x, int y) {
 int main() {
   divide(3, 2);
   divide(2, 0);
-  return 12;
+  return 0;
 }
