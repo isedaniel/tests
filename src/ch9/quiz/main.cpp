@@ -1,11 +1,17 @@
 #include "random.h"
 #include <iostream>
 
+void cleanCin() {
+  std::cin.clear();
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+
 int getGuess(int n) {
   int g{};
-  while (g < 1 || 100 > g) {
+  while (g < 1 || 100 < g) {
     std::cout << "Guess #" << n << ": ";
     std::cin >> g;
+    cleanCin();
   }
   return g;
 }
@@ -54,5 +60,6 @@ int main() {
 
     std::cout << "Would you like to play again? (y/n) ";
     std::cin >> play;
+    cleanCin();
   }
 }
