@@ -8,5 +8,8 @@ int main() {
     c = s;
     std::cout << s << ' ' << c << '\n';
   }
+
+  int i = 3.5;
+  printInt(i);
   return 0;
 }
