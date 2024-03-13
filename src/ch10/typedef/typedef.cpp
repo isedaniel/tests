@@ -6,7 +6,7 @@ PrintError printData();
 
 int main() {
   std::cout << "Printing data: ";
-  printData();
-  std::cout << '\n';
+  auto data{printData()};
+  std::cout << data << '\n';
   return 0;
 }
