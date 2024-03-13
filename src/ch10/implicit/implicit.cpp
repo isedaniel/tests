@@ -3,7 +3,10 @@
 void printInt(int n) { std::cout << n << '\n'; }
 
 int main() {
-  int n {static_cast<long>(3)};
-  printInt(n);
+  char c{};
+  for (int i{-128}; i < 256; ++i) {
+    c = i;
+    std::cout << i << ": " << c << "\n";
+  }
   return 0;
 }
