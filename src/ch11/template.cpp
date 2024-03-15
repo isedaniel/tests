@@ -5,6 +5,8 @@ auto max(auto x, auto y) {
   return (x < y) ? y : x;
 }
 
+// but this is still needed for a template function of two parameters of
+// the same type
 template <typename T>
 void print(T p, const char end='\n') {
   std::cout << p << end;
