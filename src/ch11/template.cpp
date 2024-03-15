@@ -1,7 +1,7 @@
 #include <iostream>
 
-template <typename T, typename U>
-auto max(T x, U y) {
+// C++20 function template
+auto max(auto x, auto y) {
   return (x < y) ? y : x;
 }
 
