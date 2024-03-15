@@ -22,7 +22,8 @@ T add(T x, T y) {
 }
 
 int main() {
-  print(max<int>(1, 2));
+  constexpr auto x{1};
+  print(max<int>(x, 2));
   print(add<double>(1.2, 3.4));
   print("Hello, World!");
   print(false);
