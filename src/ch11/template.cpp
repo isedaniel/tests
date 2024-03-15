@@ -1,7 +1,7 @@
 #include <iostream>
 
-template <typename T>
-T max(T x, T y) {
+template <typename T, typename U>
+auto max(T x, U y) {
   return (x < y) ? y : x;
 }
 
@@ -24,6 +24,6 @@ int main() {
   print(add<double>(1.2, 3.4));
   print("Hello, World!");
   print(false);
-  print(max<double>(1, 2.5));
+  print(max(1, 2.5));
   return 0;
 }
