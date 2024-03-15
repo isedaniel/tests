@@ -18,5 +18,6 @@ T add(T x, T y) {
 int main() {
   print(max<int>(1, 2));
   print(add<double>(1.2, 3.4));
+  print("Hello, World!");
   return 0;
 }
