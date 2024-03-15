@@ -6,11 +6,11 @@ T max(T x, T y) {
 }
 
 template <typename T>
-void print(T p, char end='\n') {
+void print(T p, const char end='\n') {
   std::cout << p << end;
 }
 
-void print(bool b, char end='\n') {
+void print(bool b, const char end='\n') {
   std::cout << std::boolalpha << b << end;
 }
 
@@ -24,5 +24,6 @@ int main() {
   print(add<double>(1.2, 3.4));
   print("Hello, World!");
   print(false);
+  print(max<double>(1, 2.5));
   return 0;
 }
