@@ -27,7 +27,7 @@ int main() {
   int& r_i{i};
   print(r_i);
 
-  const int j{2};
+  int j{2};
   int& r_j{j};
   print(r_j);
 
