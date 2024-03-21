@@ -5,9 +5,9 @@ void print(auto p, const char end='\n') {
 }
 
 int main() {
-  print("Hello, World!");
-  print(1);
-  print(1.2);
-  print('c');
+  int n{1};
+  int& ref{n};
+  print(n);
+  print(ref);
   return 0;
 }
