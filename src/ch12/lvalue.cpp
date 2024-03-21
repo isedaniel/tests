@@ -19,5 +19,17 @@ int main() {
   ++ref;
   print(n);
   print(ref);
+
+  // this shows that ref acts as alias for x
+  
+  // lvalue ref must bound to modifiable lvalue
+  int i{1};
+  int& r_i{i};
+  print(r_i);
+
+  const int j{2};
+  int& r_j{j};
+  print(r_j);
+
   return 0;
 }
