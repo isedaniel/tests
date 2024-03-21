@@ -9,5 +9,15 @@ int main() {
   int& ref{n};
   print(n);
   print(ref);
+
+  print("n++");
+  ++n;
+  print(n);
+  print(ref);
+
+  print("ref++");
+  ++ref;
+  print(n);
+  print(ref);
   return 0;
 }
