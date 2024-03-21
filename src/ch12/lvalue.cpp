@@ -31,5 +31,12 @@ int main() {
   int& r_j{j};
   print(r_j);
 
+  // lvalue ref cannot be reseted
+  int k{3};
+  r_j = k;
+
+  // j will change instead
+  print(j);
+
   return 0;
 }
