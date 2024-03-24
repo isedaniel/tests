@@ -41,5 +41,13 @@ int main() {
   // to bind reference to value qualifier const must be maintained
   const int l{10};
   const int& r_l{l};
+  print(r_l);
+
+  // modifiable object can have const ref to prevent mod
+  int m{11};
+  const int& r_m{m};
+  // r_m = 12; // can't modify through const ref
+  m = 13;
+  print(r_m); // prints: 13
   return 0;
 }
