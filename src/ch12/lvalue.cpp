@@ -38,5 +38,8 @@ int main() {
   // j will change instead
   print(j);
 
+  // to bind reference to value qualifier const must be maintained
+  const int l{10};
+  const int& r_l{l};
   return 0;
 }
