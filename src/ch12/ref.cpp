@@ -1,5 +1,6 @@
 #include <iostream>
 
+// with auto it works because it retains qualifiers
 void print(auto& p, const char end='\n') {
   std::cout << p << end;
 }
@@ -9,8 +10,8 @@ void printInt(int& n) {
 }
 
 int main() {
-  // if i pass a non-modifiable l-value it wont work
+  // auto 
   const int s { 10 };
-  printInt(s);
+  print(s);
   return 0;
 }
