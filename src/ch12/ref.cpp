@@ -1,7 +1,7 @@
 #include <iostream>
 
 // with auto it works because it retains qualifiers
-void print(const std::string& p, const char end = '\n') {
+void print(const auto& p, const char end = '\n') {
   std::cout << p << end;
 }
 
