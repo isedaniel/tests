@@ -11,7 +11,8 @@ void printInt(const int& n) {
 }
 
 int main() {
-  const int s { 10 };
+  // a non-const lvalue can be used as const rvalue ref argument
+  int s { 10 };
   printInt(s);
   return 0;
 }
