@@ -14,5 +14,8 @@ int main() {
   // a non-const lvalue can be used as const rvalue ref argument
   int s { 10 };
   printInt(s);
+
+  // an rvalue can also be used
+  printInt(5);
   return 0;
 }
