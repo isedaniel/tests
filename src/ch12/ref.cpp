@@ -5,13 +5,13 @@ void print(auto& p, const char end='\n') {
   std::cout << p << end;
 }
 
-void printInt(int& n) {
+// other way is to manually retain the const qualifier
+void printInt(const int& n) {
   std::cout << n << '\n';
 }
 
 int main() {
-  // auto 
   const int s { 10 };
-  print(s);
+  printInt(s);
   return 0;
 }
