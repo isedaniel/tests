@@ -46,6 +46,6 @@ int main() {
   const int &r_m{m};
   // r_m = 12; // can't modify through const ref
   m = 13;
-  print(r_m); // prints: 13
+  print(r_m);  // prints: 13
   return 0;
 }
