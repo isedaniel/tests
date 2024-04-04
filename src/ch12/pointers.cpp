@@ -5,10 +5,9 @@
 void print(const auto& a, const char end = '\n') { std::cout << a << end; }
 
 int main() {
-  int n{10};
   int* ptr{nullptr};
 
-  print(*ptr);
+  print(ptr==nullptr? "nullptr" : "non-nullptr");
 
   return 0;
 }
