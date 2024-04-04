@@ -8,7 +8,6 @@ int main() {
   int n{10};
   int* ptr{nullptr};
 
-  ptr = &n;
   print(*ptr);
 
   return 0;
